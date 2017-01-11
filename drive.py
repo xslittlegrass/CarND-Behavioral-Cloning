@@ -14,7 +14,7 @@ from io import BytesIO
 
 from keras.models import model_from_json
 from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_array
-from skimage.transform import resize
+import cv2
 
 # Fix error with Keras and TensorFlow
 import tensorflow as tf
@@ -43,15 +43,16 @@ def telemetry(sid, data):
     transformed_image_array = image_array[None, :, :, :]
     
     # preprocessing
-    img_trimed = transformed_image_array[0,60:140]
-    resized = resize(img_trimed,(20,40),order=1, preserve_range=True)
+    
+    trimed = transformed_image_array[0][60:140]
+    resized = cv2.resize(transformed_image_array[0],(32,16))
     
     # This model currently assumes that the features of the model are just the images. Feel free to change this.
     steering_angle = float(model.predict(resized[np.newaxis], batch_size=1))
     # The driving model currently just outputs a constant throttle. Feel free to edit this.
     throttle = 0.2
     print(steering_angle, throttle)
-    send_control(0.8*steering_angle, throttle)
+    send_control(steering_angle, throttle)
 
 
 @sio.on('connect')
