@@ -44,13 +44,13 @@ def telemetry(sid, data):
     
     # preprocessing
     
-    trimed = transformed_image_array[0][60:140]
-    resized = cv2.resize(transformed_image_array[0],(32,16))
+    resized = ( cv2.resize((cv2.cvtColor(transformed_image_array[0], cv2.COLOR_RGB2HSV))[:,:,1],(32,16))).reshape(1,16,32,1)
+   
     
     # This model currently assumes that the features of the model are just the images. Feel free to change this.
-    steering_angle = float(model.predict(resized[np.newaxis], batch_size=1))
+    steering_angle = float(model.predict(resized, batch_size=1))
     # The driving model currently just outputs a constant throttle. Feel free to edit this.
-    throttle = 0.2
+    throttle = 0.3
     print(steering_angle, throttle)
     send_control(steering_angle, throttle)
 
