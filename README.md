@@ -3,8 +3,8 @@
 This is a solution for the Behavioral Cloning project of Udacity Self-Driving Car Nanodegree. This solution uses a tiny neural network with only 63 parameters.
 
 Video of the actions of this neural network are here:
-[Track 1](https://www.youtube.com/watch?v=AFHtBDaqQqk&t=10s)
-[Track 2](https://www.youtube.com/watch?v=Emzy_Phz43g&t=14s)
+[Track 1](https://www.youtube.com/watch?v=AFHtBDaqQqk)
+[Track 2](https://www.youtube.com/watch?v=Emzy_Phz43g)
 
 A post about this solution is at [Self-driving car in a simulator with a tiny neural network](https://medium.com/@xslittlegrass/self-driving-car-in-a-simulator-with-a-tiny-neural-network-13d33b871234#.outp5gx7f).
 
