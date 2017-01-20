@@ -19,5 +19,5 @@ The model contains 6 layers:
 
 ## Training
 
-The model is trained with a batch size of 128 and epoch of 10. Testing is performed in the simulator.
+The model is trained with a batch size of 128 and epoch of 10 and an adam optimization method. Since the input images are resized to a dimension of 16X32, all the data can be fit into the memeory, and thus a generator is not need. Because of the small size of the network and input data, the model can be trained with just a few seconds. The reason to use only 10 epochs is that this tiny model converges very fast in just a few epoch, and the validation accuracy usually flattens out around 10 epochs. Using more than 10 epochs will not increase the validation accuracy. Testing is performed in the simulator. 
 
