@@ -1,4 +1,4 @@
-#Self-driving car in a simulator with a tiny neural network
+# Self-driving car in a simulator with a tiny neural network
 
 This is a project for Udacity Self-Driving Car Nanodegree program. The aim of this project is to control a car in a simulator using neural network. This implementation uses a convolutional neural network (CNN) with only 63 parameters, yet performs well on both the training and test tracks. The implementation of the project is in the files `drive.py` and `model.py` and the explanation of the implementation is in `project-3.ipynb`. Videos of the actions of this neural network are here: [Track 1](https://www.youtube.com/watch?v=AFHtBDaqQqk) [Track 2](https://www.youtube.com/watch?v=Emzy_Phz43g). A post about this solution is at [Self-driving car in a simulator with a tiny neural network](https://medium.com/@xslittlegrass/self-driving-car-in-a-simulator-with-a-tiny-neural-network-13d33b871234#.outp5gx7f).
 
